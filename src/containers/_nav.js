@@ -11,7 +11,7 @@ export default [
   },
   {
     _tag: 'CSidebarNavTitle',
-    _children: ['Theme']
+    _children: ['Transaktionen']
   },
   {
     _tag: 'CSidebarNavItem',
@@ -20,6 +20,50 @@ export default [
     icon: 'cil-home',
   },
   {
+    _tag: 'CSidebarNavItem',
+    name: 'Überweisung',
+    to: '/transfer',
+    icon: 'cil-bank',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Kontoauszüge',
+    to: '/statements',
+    icon: 'cil-spreadsheet',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Analyse',
+    to: '/analytics',
+    icon: 'cil-chart-pie',
+  },
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['Konfiguration']
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'EBICS',
+    to: '/ebics',
+    icon: 'cil-fax',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'BLZ Verzeichnis',
+    to: '/blz',
+    icon: 'cil-list',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Protokoll',
+    to: '/protocol',
+    icon: 'cil-info',
+  },
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['CoreUI']
+  },
+   {
     _tag: 'CSidebarNavItem',
     name: 'Colors',
     to: '/theme/colors',
@@ -33,7 +77,7 @@ export default [
   },
   {
     _tag: 'CSidebarNavTitle',
-    _children: ['Components']
+    _children: ['Tools']
   },
   {
     _tag: 'CSidebarNavDropdown',

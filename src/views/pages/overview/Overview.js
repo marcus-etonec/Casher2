@@ -23,7 +23,12 @@ import {
   CWidgetIcon,
   CWidgetProgressIcon,
   CWidgetSimple,
-  CProgress
+  CProgress,
+  CWidgetDropdown,
+  CDropdown,
+  CDropdownMenu,
+  CDropdownItem,
+  CDropdownToggle
 } from '@coreui/react'
 
 import WidgetsBrand from '../../widgets/WidgetsBrand'
@@ -60,35 +65,95 @@ const Overview = () => {
     <div className="c-app c-default-layout flex-row align-items-center">
       <CContainer>
         <CRow>
-          <CCol xs="12" sm="6" lg="3">
-           <CWidgetProgressIcon
-              header="87.500"
-              text="Visitors"
-              color="gradient-success"
-              inverse
-            >
-              <CIcon name="cil-people" height="36"/>
-            </CWidgetProgressIcon>
-            </CCol>
-            <CCol xs="12" sm="6" lg="3">
-            <CWidgetProgressIcon
-              header="87.500"
-              text="Visitors"
+          <CCol sm="6" lg="3">
+            <CWidgetDropdown
               color="gradient-info"
-              inverse
+              header="9.823"  
+              text="Members online"
+              footerSlot={
+                <ChartLineSimple
+                  pointed
+                  className="c-chart-wrapper mt-3 mx-3"
+                  style={{height: '70px'}}
+                  dataPoints={[65, 59, 84, 84, 51, 55, 40]}
+                  pointHoverBackgroundColor="info"
+                  label="Members"
+                  labels="months"
+                />
+              }
             >
-              <CIcon name="cil-people" height="36"/>
-            </CWidgetProgressIcon>  
+              <CDropdown>
+                <CDropdownToggle color="transparent">
+                  <CIcon name="cil-settings"/>
+                </CDropdownToggle>
+                <CDropdownMenu className="pt-0" placement="bottom-end">
+                  <CDropdownItem>Action</CDropdownItem>
+                  <CDropdownItem>Another action</CDropdownItem>
+                  <CDropdownItem>Something else here...</CDropdownItem>
+                  <CDropdownItem disabled>Disabled action</CDropdownItem>
+                </CDropdownMenu>
+              </CDropdown>
+            </CWidgetDropdown>
           </CCol>
-          <CCol xs="12" sm="6" lg="3">
-            <CWidgetProgressIcon
-              header="87.500"
-              text="Visitors"
-              color="gradient-warning"
-              inverse
+          <CCol sm="6" lg="3">
+            <CWidgetDropdown
+              color="gradient-success"
+              header="9.823"  
+              text="Members online"
+              footerSlot={
+                <ChartLineSimple
+                  pointed
+                  className="c-chart-wrapper mt-3 mx-3"
+                  style={{height: '70px'}}
+                  dataPoints={[65, 59, 84, 84, 51, 55, 40]}
+                  pointHoverBackgroundColor="success"
+                  label="Members"
+                  labels="months"
+                />
+              }
             >
-              <CIcon name="cil-people" height="36"/>
-            </CWidgetProgressIcon>  
+              <CDropdown>
+                <CDropdownToggle color="transparent">
+                  <CIcon name="cil-settings"/>
+                </CDropdownToggle>
+                <CDropdownMenu className="pt-0" placement="bottom-end">
+                  <CDropdownItem>Action</CDropdownItem>
+                  <CDropdownItem>Another action</CDropdownItem>
+                  <CDropdownItem>Something else here...</CDropdownItem>
+                  <CDropdownItem disabled>Disabled action</CDropdownItem>
+                </CDropdownMenu>
+              </CDropdown>
+            </CWidgetDropdown>
+          </CCol>
+          <CCol sm="6" lg="3">
+            <CWidgetDropdown
+              color="gradient-warning"
+              header="9.823"  
+              text="Members online"
+              footerSlot={
+                <ChartLineSimple
+                  pointed
+                  className="c-chart-wrapper mt-3 mx-3"
+                  style={{height: '70px'}}
+                  dataPoints={[65, 59, 84, 84, 51, 55, 40]}
+                  pointHoverBackgroundColor="warning"
+                  label="Members"
+                  labels="months"
+                />
+              }
+            >
+              <CDropdown>
+                <CDropdownToggle color="transparent">
+                  <CIcon name="cil-settings"/>
+                </CDropdownToggle>
+                <CDropdownMenu className="pt-0" placement="bottom-end">
+                  <CDropdownItem>Action</CDropdownItem>
+                  <CDropdownItem>Another action</CDropdownItem>
+                  <CDropdownItem>Something else here...</CDropdownItem>
+                  <CDropdownItem disabled>Disabled action</CDropdownItem>
+                </CDropdownMenu>
+              </CDropdown>
+            </CWidgetDropdown>
           </CCol>
         </CRow>
         <CRow>

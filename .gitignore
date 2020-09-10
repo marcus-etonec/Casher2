@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+.DS_Store
 # Logs
 logs
 *.log
@@ -77,4 +77,3 @@ typings/
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
->>>>>>> e5bf0bb0c34efc3c91a309559e4fe31dda741757
