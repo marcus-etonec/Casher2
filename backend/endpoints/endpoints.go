@@ -68,6 +68,17 @@ func Home(w ApiResponseWriter, r *http.Request, params *Parameters) {
 	response := PrepareResponse(EverythingOk, testarray)
 	json.NewEncoder(w).Encode(response)
 }
+func Transactions(w ApiResponseWriter, r *http.Request, params *Parameters) {
+	var test = structs.Transaction{}
+	var testarray = []structs.Transaction{}
+	test.Id = 0
+	test.Name = "John Doe"
+	test.Registered = "Guest"
+	test.Status = "Pending"
+	testarray = append(testarray, test)
+	response := PrepareResponse(EverythingOk, testarray)
+	json.NewEncoder(w).Encode(response)
+}
 
 // Function to check a valid token to respond as API
 func checkValidToken(token string) bool {
@@ -131,4 +142,5 @@ func RegisterCall(muxRouter *mux.Router, URLEndPoint string, FunctionEndPoint fu
 func PrepareEndpoints(muxRouter *mux.Router) {
 	muxRouter.NotFoundHandler = http.HandlerFunc(NotFound)
 	RegisterCall(muxRouter, "/", Home, "GET", true, nil)
+	RegisterCall(muxRouter, "/transactions", Transactions, "GET", true, nil)
 }
